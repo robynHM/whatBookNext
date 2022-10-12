@@ -1,0 +1,23 @@
+@import models.DataModel
+@(book: DataModel)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>book</title>
+</head>
+<body>
+<h1>DB Book</h1>
+<div>
+
+  <ul>
+    <h3>@book.title</h3>
+    <li>ID: @book.id</li>
+    <li>Description: @book.description</li>
+    <li>Page Count: @book.pageCount</li>
+  </ul>
+
+</div>
+</body>
+</html>

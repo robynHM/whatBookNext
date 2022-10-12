@@ -1,0 +1,20 @@
+@import models.BookModel
+@(readingList: Seq[BookModel])
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reading list</title>
+</head>
+<body>
+<h1>Reading list</h1>
+    @readingList.map{book =>
+        <h3>@book.title</h3>
+        <ul>
+            <li>@book.description</li>
+            <li>@book.image</li>
+        </ul>
+    }
+</body>
+</html>

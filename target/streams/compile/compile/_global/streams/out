@@ -1,0 +1,32 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/controllers/ApplicationController.scala:3:8: object ReadList is not a member of package models[0m
+[0m[[0m[31merror[0m] [0m[0mimport models.{APIError, BookModel, ReadList, ReadingList, UserModel}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/services/BookService.scala:6:8: object ReadingList is not a member of package models[0m
+[0m[[0m[31merror[0m] [0m[0mimport models.{APIError, BookModel, ReadingList, UserModel}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/repositories/DataRepository.scala:41:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/repositories/DataRepository.scala:48:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/repositories/DataRepository.scala:71:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/services/BookService.scala:33:41: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Seq[Boolean][0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m          case Right(books) if books.map(readingBook => readingBook.equals(book)) => dataRepository.removeBookReading(userName, book)[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/book.scala.html:13:76: not enough arguments for method addToReading: (username: String, search: String, term: String): play.api.mvc.Call.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameters username, search, term.[0m
+[0m[[0m[31merror[0m] [0m[0m<!--    <li><a href="@controllers.routes.ApplicationController.addToReading()">Reading List</a></li>-->[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

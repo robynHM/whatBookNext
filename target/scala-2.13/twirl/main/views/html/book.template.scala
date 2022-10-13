@@ -34,8 +34,7 @@ Seq[Any](format.raw/*3.1*/("""
 <body>
 <h1>"""),_display_(/*11.6*/book/*11.10*/.title),format.raw/*11.16*/("""</h1>
 <ul>
-<!--    <li><a href=""""),_display_(/*13.23*/controllers/*13.34*/.routes.ApplicationController.addToReading()),format.raw/*13.78*/("""">Reading List</a></li>-->
-<!--    need something to check if they are logged in or not button should lead to login page if login false if logged in then-->
+
 </ul>
 </body>
 </html>"""))
@@ -54,11 +53,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-11T17:32:01.292
+                  DATE: 2022-10-13T15:57:08.470
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/book.scala.html
-                  HASH: a3cef5df42a29391af306941c7c56e1892023caa
-                  MATRIX: 432->1|762->26|873->44|900->45|1044->163|1057->167|1084->173|1144->206|1164->217|1229->261
-                  LINES: 17->1|22->2|27->3|28->4|35->11|35->11|35->11|37->13|37->13|37->13
+                  HASH: 1c7a52524569f1c4bad667df073101f839d0b267
+                  MATRIX: 432->1|762->26|873->44|900->45|1044->163|1057->167|1084->173
+                  LINES: 17->1|22->2|27->3|28->4|35->11|35->11|35->11
                   -- GENERATED --
               */
           

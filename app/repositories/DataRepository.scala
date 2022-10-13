@@ -22,7 +22,7 @@ trait TraitDataRepo {
   def addToRead(userName: String, book: BookModel): Future[Either[APIError, UserModel]]
   def updateName(userName: String, value: String): Future[Either[APIError, UserModel]]
   def delete(userName: String): Future[Either[APIError, String]]
-  def removeBookReading(userName: String, book: BookModel): Future[Either[APIError, Seq[BookModel]]]
+  def removeBookReading(userName: String, book: BookModel): Future[Either[APIError, UserModel]]
 }
 
 @Singleton
@@ -69,9 +69,9 @@ class DataRepository @Inject()(mongoComponent: MongoComponent)(implicit ec: Exec
 
   def returnUser(userName: String): Future[Either[APIError, UserModel]] = {
     collection.find(byUserName(userName)).headOption flatMap {
-      case Some(data) =>
-        Future(Right(data))
-      case _ => Future(Left(APIError.BadAPIResponse(404, "could not read book")))
+      case Some(user) =>
+        Future(Right(user))
+      case _ => Future(Left(APIError.BadAPIResponse(404, "could not find users account information")))
     }
   }
 
@@ -111,16 +111,16 @@ class DataRepository @Inject()(mongoComponent: MongoComponent)(implicit ec: Exec
     collection.deleteOne(
         filter = byUserName(userName)).toFutureOption().map{
       case Some(value) if value.getDeletedCount == 1 => Right("deleted")
-      case _ =>  Left(APIError.BadAPIResponse(400, "could not update book"))
+      case _ =>  Left(APIError.BadAPIResponse(400, "could not delete user account"))
     }
   }
 
-  def removeBookReading(userName: String, book: BookModel): Future[Either[APIError, Seq[BookModel]]] = {
+  def removeBookReading(userName: String, book: BookModel): Future[Either[APIError, UserModel]] = {
     collection.findOneAndUpdate(
       equal("userName", userName),
       pull("readingList", book)
     ).toFutureOption().map {
-      case Some(user: UserModel) => Right(user.readingList)
+      case Some(user: UserModel) => Right(user)
       case _ => Left(APIError.BadAPIResponse(400, "could not remove book from reading list"))
     }
   }

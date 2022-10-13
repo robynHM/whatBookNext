@@ -1,0 +1,22 @@
+@import forms.UserData
+@(userForm: Form[UserData])(implicit messages: Messages)
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signIn/up</title>
+</head>
+<body>
+<h1>Sign Up</h1>
+
+<form method="post" autocomplete="on">
+    Email: <input type="text" name="usernameEmail"><br>
+    username: <input type="text" name="name"><br>
+    Password: <input type="text" name="password"><br>
+    <input type="submit">
+</form>
+
+</body>
+</html>

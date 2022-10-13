@@ -27,11 +27,12 @@ class ApplicationService @Inject()(dataRepository: TraitDataRepo)(implicit ec: E
     }
   }
 
-  def createUser(input: Request[JsValue]): Future[Either[APIError, UserModel]] = {
-    input.body.validate[UserModel] match {
-      case JsSuccess(value, _) => dataRepository.createUser(value)
-      case JsError(errors) => Future(Left(APIError.BadAPIResponse(415, "could not make book")))
+  def createUser(newUser: UserModel): Future[Either[APIError, UserModel]] = {
+    dataRepository.createUser(newUser).map{
+      case Right(user: UserModel) => Right(user)
+      case Left(_) => Left(APIError.BadAPIResponse(415, "could not create user account"))
     }
+
   }
 
   def returnUser(userName: String): Future[Either[APIError, UserModel]] =
@@ -74,7 +75,7 @@ class ApplicationService @Inject()(dataRepository: TraitDataRepo)(implicit ec: E
   def removeBookReading(userName: String, book: BookModel): Future[Either[APIError, Seq[BookModel]]] ={
     dataRepository.removeBookReading(userName, book).map {
       case Left(value) => Left(APIError.BadAPIResponse(404, "could not delete book"))
-      case Right(books: Seq[BookModel]) => Right(books)
+      case Right(books) => Right(books.readingList)
     }
   }
 

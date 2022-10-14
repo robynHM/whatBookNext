@@ -1,15 +1,22 @@
 @import forms.UserData
-@(userForm: Form[UserData])(implicit messages: Messages)
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>signIn/up</title>
-</head>
-<body>
-<h1>Sign In/Up</h1>
+@(userForm: Form[UserData])
 
 
-</body>
-</html>
+@main("sign in"){
+
+<div class="headerBackground">
+    <h1 class="header">What Book Next...</h1>
+
+    <ul class="navigation">
+        <li>Browse by</li>
+        <li><a href="@controllers.routes.ApplicationController.home()">Home</a></li>
+        <li>Search</li>
+    </ul>
+</div>
+<h2 class="pageTitle">Sign In/Up</h2>
+<div class="signUpFromSignIn">
+<p>If you do not have an account then</p>
+<p><a href="@controllers.routes.ApplicationController.signUp()">Sign Up</a></p>
+</div>
+
+}

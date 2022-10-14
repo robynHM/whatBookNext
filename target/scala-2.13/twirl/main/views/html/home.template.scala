@@ -24,17 +24,18 @@ object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlF
 
 
 Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](format.raw/*2.25*/("""
+"""),format.raw/*3.1*/("""<div class="headerBackground">
+    <h1 class="header">What Book Next...</h1>
 
-"""),format.raw/*4.1*/("""<h1>What Book Next ...</h1>
-
-<div class="navigation">
-  <ul>
-    <li>Browse by</li>
-    <li><a href=""""),_display_(/*9.19*/controllers/*9.30*/.routes.ApplicationController.home()),format.raw/*9.66*/("""">Home</a></li>
-    <li>Search</li>
-  </ul>
+    <ul class="navigation">
+      <li>Browse by</li>
+      <li><a href=""""),_display_(/*8.21*/controllers/*8.32*/.routes.ApplicationController.home()),format.raw/*8.68*/("""">Home</a></li>
+      <li>Search</li>
+      <li><a href=""""),_display_(/*10.21*/controllers/*10.32*/.routes.ApplicationController.signIn()),format.raw/*10.70*/("""">Sign In/Up</a></li>
+    </ul>
 </div>
-""")))}),format.raw/*13.2*/("""
+<img class="homeImg" src="/assets/images/homePic.png" alt="book and coffee">
+""")))}),format.raw/*14.2*/("""
 """))
       }
     }
@@ -51,11 +52,11 @@ Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](form
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-13T16:49:28.941
+                  DATE: 2022-10-14T15:52:55.854
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/home.scala.html
-                  HASH: c32980a5c9f209ea089e61a4f211051b63f268aa
-                  MATRIX: 721->1|817->5|847->27|885->28|913->30|1041->132|1060->143|1116->179|1198->231
-                  LINES: 21->1|26->2|26->2|26->2|28->4|33->9|33->9|33->9|37->13
+                  HASH: ca591e73f612c0e92ed96998d323af087b2e6efd
+                  MATRIX: 721->1|817->5|847->27|885->28|912->29|1089->180|1108->191|1164->227|1249->285|1269->296|1328->334|1475->451
+                  LINES: 21->1|26->2|26->2|26->2|27->3|32->8|32->8|32->8|34->10|34->10|34->10|38->14
                   -- GENERATED --
               */
           

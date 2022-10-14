@@ -1,13 +1,14 @@
 @()
 @main("What Book Next"){
+<div class="headerBackground">
+    <h1 class="header">What Book Next...</h1>
 
-<h1>What Book Next ...</h1>
-
-<div class="navigation">
-  <ul>
-    <li>Browse by</li>
-    <li><a href="@controllers.routes.ApplicationController.home()">Home</a></li>
-    <li>Search</li>
-  </ul>
+    <ul class="navigation">
+      <li>Browse by</li>
+      <li><a href="@controllers.routes.ApplicationController.home()">Home</a></li>
+      <li>Search</li>
+      <li><a href="@controllers.routes.ApplicationController.signIn()">Sign In/Up</a></li>
+    </ul>
 </div>
+<img class="homeImg" src="/assets/images/homePic.png" alt="book and coffee">
 }

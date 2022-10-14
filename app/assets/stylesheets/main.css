@@ -1,0 +1,74 @@
+.header{
+    color: #D7D4DD;
+    text-align: center;
+    font-family: Copperplate;
+    padding: 1%;
+}
+
+.headerBackground{
+    background-color: #715C8C;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    color: #D7D4DD;
+    padding: 2%;
+}
+
+.navigation li a{
+    color: inherit;
+    text-decoration: none;
+    font-family: Copperplate;
+}
+.navigation li{
+    font-family: Copperplate;
+}
+
+.pageTitle{
+    color: #333F63;
+    font-family: Copperplate;
+    margin-left: 10%;
+}
+
+.homeImg{
+    width: 100%;
+    height: auto;
+}
+
+.signInImg{
+    width: 30%;
+    height: auto;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.signUpBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+}
+
+.signupForm{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+}
+
+.signUpFromSignIn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+color: #333F63;
+}
+
+.signUpFromSignIn p a{
+    color: #838BC2;
+    text-decoration: none;
+    font-family: Copperplate;
+}

@@ -1,22 +1,27 @@
 @import forms.UserData
-@(userForm: Form[UserData])(implicit messages: Messages)
+@(userForm: Form[UserData])
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>signIn/up</title>
-</head>
-<body>
-<h1>Sign Up</h1>
+@main("sign up"){
+<div class="headerBackground">
+    <h1 class="header">What Book Next...</h1>
 
-<form method="post" autocomplete="on">
+    <ul class="navigation">
+        <li>Browse by</li>
+        <li><a href="@controllers.routes.ApplicationController.home()">Home</a></li>
+        <li>Search</li>
+    </ul>
+</div>
+<h2 class="pageTitle">Sign Up</h2>
+<div class="signUpBox">
+<img class="signInImg" src="/assets/images/signupPic.jpg" alt="library ladder">
+
+<form class="signupForm" method="post" autocomplete="on">
     Email: <input type="text" name="usernameEmail"><br>
     username: <input type="text" name="name"><br>
     Password: <input type="text" name="password"><br>
     <input type="submit">
 </form>
+</div>
 
-</body>
-</html>
+}

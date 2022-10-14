@@ -26,24 +26,29 @@ object signUp extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Htm
 
 Seq[Any](format.raw/*3.1*/("""
 
-"""),format.raw/*5.1*/("""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>signIn/up</title>
-</head>
-<body>
-<h1>Sign Up</h1>
+"""),_display_(/*5.2*/main("sign up")/*5.17*/{_display_(Seq[Any](format.raw/*5.18*/("""
+"""),format.raw/*6.1*/("""<div class="headerBackground">
+    <h1 class="header">What Book Next...</h1>
 
-<form method="post" autocomplete="on">
+    <ul class="navigation">
+        <li>Browse by</li>
+        <li><a href=""""),_display_(/*11.23*/controllers/*11.34*/.routes.ApplicationController.home()),format.raw/*11.70*/("""">Home</a></li>
+        <li>Search</li>
+    </ul>
+</div>
+<h2 class="pageTitle">Sign Up</h2>
+<div class="signUpBox">
+<img class="signInImg" src="/assets/images/signupPic.jpg" alt="library ladder">
+
+<form class="signupForm" method="post" autocomplete="on">
     Email: <input type="text" name="usernameEmail"><br>
     username: <input type="text" name="name"><br>
     Password: <input type="text" name="password"><br>
     <input type="submit">
 </form>
+</div>
 
-</body>
-</html>"""))
+""")))}))
       }
     }
   }
@@ -59,11 +64,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-13T15:55:44.170
+                  DATE: 2022-10-14T16:08:26.755
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/signUp.scala.html
-                  HASH: 785e2b9fe4791a55d569d231f60097f1e4e3c32e
-                  MATRIX: 432->1|767->24|887->51|915->53
-                  LINES: 17->1|22->2|27->3|29->5
+                  HASH: bedb30f0698eb547a2ff576e091885bbd8d24846
+                  MATRIX: 432->1|767->24|887->51|915->54|938->69|976->70|1003->71|1185->226|1205->237|1262->273
+                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|30->6|35->11|35->11|35->11
                   -- GENERATED --
               */
           

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/conf/routes
-// @DATE:Thu Oct 13 16:31:26 BST 2022
+// @DATE:Mon Oct 17 09:38:25 BST 2022
 
 package controllers;
 

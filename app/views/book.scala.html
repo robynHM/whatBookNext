@@ -1,16 +1,40 @@
 @import models.BookModel
 @(book: BookModel)
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>book search</title>
-</head>
-<body>
-<h1>@book.title</h1>
-<ul>
+@main("Book search"){
+<div class="headerBackground">
+    <div >
+        <img class="headingBanner" src="/assets/images/bannerPic.jpg" alt="books piled with writing what book next over the top">
+    </div>
+    <ul class="navigation">
+        <li>Browse by</li>
+        <li><a href="@controllers.routes.ApplicationController.home()">Home</a></li>
+        <li>Search</li>
+        <li><a href="@controllers.routes.ApplicationController.signIn()">Sign In/Up</a></li>
+    </ul>
+</div>
 
-</ul>
-</body>
-</html>
+<h1 class="pageTitle">@book.title</h1>
+
+<div class="bookSearchContainer">
+<img class = "bookCover" src= "/assets/images/signupPic.jpg" alt="image of a book cover">
+    <div class="bookSearchText">
+        @book.author.map{name =>
+            <p class="authorName">@name</p>
+        }
+        <div class="iconContainers">
+
+            <img class= "icon" src= "/assets/images/addToReadingIcon.png" alt="plus symbol">
+            <span class="hideText">Add to your reading list</span>
+
+            <img class= "icon" src= "/assets/images/addToReadIcon.png" alt="end book symbol">
+            <span class="hideText">Add to your read list</span>
+
+         </div>
+        <ul class="bookSearchDetails">
+            <li>@book.description</li>
+        </ul>
+    </div>
+</div>
+}
+

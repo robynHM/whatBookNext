@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/conf/routes
-// @DATE:Thu Oct 13 16:31:26 BST 2022
+// @DATE:Mon Oct 17 09:38:25 BST 2022
 
 package router
 
@@ -42,7 +42,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """home""", """controllers.ApplicationController.home()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userprofile/""" + "$" + """username<[^/]+>/readinglist""", """controllers.ApplicationController.showReadingList(username:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userprofile/""" + "$" + """username<[^/]+>""", """controllers.ApplicationController.showUserAccount(username:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """findBook/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""", """controllers.ApplicationController.findBook(search:String, term:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """findbook/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""", """controllers.ApplicationController.findBook(search:String, term:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userprofile/""" + "$" + """username<[^/]+>/readinglist""", """controllers.ApplicationController.showReadingList(username:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userprofile/""" + "$" + """username<[^/]+>/readlist""", """controllers.ApplicationController.showReadList(username:String)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userprofile/updatename/""" + "$" + """username<[^/]+>""", """controllers.ApplicationController.updateUserName(username:String)"""),
@@ -116,7 +116,7 @@ class Routes(
 
   // @LINE:5
   private[this] lazy val controllers_ApplicationController_findBook3_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("findBook/"), DynamicPart("search", """[^/]+""",true), StaticPart("/"), DynamicPart("term", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("findbook/"), DynamicPart("search", """[^/]+""",true), StaticPart("/"), DynamicPart("term", """[^/]+""",true)))
   )
   private[this] lazy val controllers_ApplicationController_findBook3_invoker = createInvoker(
     ApplicationController_0.findBook(fakeValue[String], fakeValue[String]),
@@ -126,7 +126,7 @@ class Routes(
       "findBook",
       Seq(classOf[String], classOf[String]),
       "GET",
-      this.prefix + """findBook/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""",
+      this.prefix + """findbook/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""",
       """""",
       Seq()
     )

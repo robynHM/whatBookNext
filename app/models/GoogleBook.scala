@@ -4,7 +4,7 @@ import play.api.libs.json.{Json, OFormat}
 
 case class Image(thumbnail: String)
 
-case class VolumeInfo(imageLinks: Image, title: String, description: String)
+case class VolumeInfo(imageLinks: Image, title: String, description: String, authors: Seq[String])
 
 case class Item(id: String, volumeInfo: VolumeInfo)
 

@@ -25,17 +25,18 @@ object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlF
 
 Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](format.raw/*2.25*/("""
 """),format.raw/*3.1*/("""<div class="headerBackground">
-    <h1 class="header">What Book Next...</h1>
-
+    <div >
+        <img class="headingBanner" src="/assets/images/bannerPic.jpg" alt="books piled with writing what book next over the top">
+    </div>
     <ul class="navigation">
       <li>Browse by</li>
-      <li><a href=""""),_display_(/*8.21*/controllers/*8.32*/.routes.ApplicationController.home()),format.raw/*8.68*/("""">Home</a></li>
+      <li><a href=""""),_display_(/*9.21*/controllers/*9.32*/.routes.ApplicationController.home()),format.raw/*9.68*/("""">Home</a></li>
       <li>Search</li>
-      <li><a href=""""),_display_(/*10.21*/controllers/*10.32*/.routes.ApplicationController.signIn()),format.raw/*10.70*/("""">Sign In/Up</a></li>
+      <li><a href=""""),_display_(/*11.21*/controllers/*11.32*/.routes.ApplicationController.signIn()),format.raw/*11.70*/("""">Sign In/Up</a></li>
     </ul>
 </div>
 <img class="homeImg" src="/assets/images/homePic.png" alt="book and coffee">
-""")))}),format.raw/*14.2*/("""
+""")))}),format.raw/*15.2*/("""
 """))
       }
     }
@@ -52,11 +53,11 @@ Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](form
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-14T15:52:55.854
+                  DATE: 2022-10-17T09:29:06.269
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/home.scala.html
-                  HASH: ca591e73f612c0e92ed96998d323af087b2e6efd
-                  MATRIX: 721->1|817->5|847->27|885->28|912->29|1089->180|1108->191|1164->227|1249->285|1269->296|1328->334|1475->451
-                  LINES: 21->1|26->2|26->2|26->2|27->3|32->8|32->8|32->8|34->10|34->10|34->10|38->14
+                  HASH: 0f1da75143b9f0a1f2b8e39b7f6d3d21178615b4
+                  MATRIX: 721->1|817->5|847->27|885->28|912->29|1194->285|1213->296|1269->332|1354->390|1374->401|1433->439|1580->556
+                  LINES: 21->1|26->2|26->2|26->2|27->3|33->9|33->9|33->9|35->11|35->11|35->11|39->15
                   -- GENERATED --
               */
           

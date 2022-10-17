@@ -29,18 +29,19 @@ Seq[Any](format.raw/*3.1*/("""
 """),_display_(/*5.2*/main("sign in")/*5.17*/{_display_(Seq[Any](format.raw/*5.18*/("""
 
 """),format.raw/*7.1*/("""<div class="headerBackground">
-    <h1 class="header">What Book Next...</h1>
-
+    <div >
+        <img class="headingBanner" src="/assets/images/bannerPic.jpg" alt="books piled with writing what book next over the top">
+    </div>
     <ul class="navigation">
         <li>Browse by</li>
-        <li><a href=""""),_display_(/*12.23*/controllers/*12.34*/.routes.ApplicationController.home()),format.raw/*12.70*/("""">Home</a></li>
+        <li><a href=""""),_display_(/*13.23*/controllers/*13.34*/.routes.ApplicationController.home()),format.raw/*13.70*/("""">Home</a></li>
         <li>Search</li>
     </ul>
 </div>
 <h2 class="pageTitle">Sign In/Up</h2>
 <div class="signUpFromSignIn">
 <p>If you do not have an account then</p>
-<p><a href=""""),_display_(/*19.14*/controllers/*19.25*/.routes.ApplicationController.signUp()),format.raw/*19.63*/("""">Sign Up</a></p>
+<p><a href=""""),_display_(/*20.14*/controllers/*20.25*/.routes.ApplicationController.signUp()),format.raw/*20.63*/("""">Sign Up</a></p>
 </div>
 
 """)))}))
@@ -59,11 +60,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-14T16:34:24.212
+                  DATE: 2022-10-17T09:32:44.744
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/signInUp.scala.html
-                  HASH: 23e3eea6aa97ccae2d1d842f0ebcbd5dab4bbc43
-                  MATRIX: 432->1|769->24|889->51|917->54|940->69|978->70|1006->72|1188->227|1208->238|1265->274|1473->455|1493->466|1552->504
-                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|31->7|36->12|36->12|36->12|43->19|43->19|43->19
+                  HASH: 8593e7f631a47f5743249d82b097dc90b2883a22
+                  MATRIX: 432->1|769->24|889->51|917->54|940->69|978->70|1006->72|1293->332|1313->343|1370->379|1578->560|1598->571|1657->609
+                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|31->7|37->13|37->13|37->13|44->20|44->20|44->20
                   -- GENERATED --
               */
           

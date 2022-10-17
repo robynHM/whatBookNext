@@ -2,7 +2,7 @@
 GET     /home                           controllers.ApplicationController.home()
 GET     /userprofile/:username/readinglist       controllers.ApplicationController.showReadingList(username: String)
 GET     /userprofile/:username               controllers.ApplicationController.showUserAccount(username: String)
-GET     /findBook/:search/:term               controllers.ApplicationController.findBook(search: String, term: String)
+GET     /findbook/:search/:term               controllers.ApplicationController.findBook(search: String, term: String)
 GET     /userprofile/:username/readinglist               controllers.ApplicationController.showReadingList(username: String)
 GET     /userprofile/:username/readlist               controllers.ApplicationController.showReadList(username: String)
 PUT     /userprofile/updatename/:username             controllers.ApplicationController.updateUserName(username: String)

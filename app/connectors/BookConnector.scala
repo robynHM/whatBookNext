@@ -17,7 +17,7 @@ class BookConnector @Inject()(ws: WSClient) {
         result =>
           result.json.validate[GoogleBook] match {
             case JsSuccess(value, _) =>
-              Right(BookModel(value.items.head.id, value.items.head.volumeInfo.title, value.items.head.volumeInfo.description, value.items.head.volumeInfo.imageLinks.thumbnail))
+              Right(BookModel(value.items.head.id, value.items.head.volumeInfo.title, value.items.head.volumeInfo.authors, value.items.head.volumeInfo.description, value.items.head.volumeInfo.imageLinks.thumbnail))
             case JsError(errors) =>
               val errorMessage = errors.map {
                 case (_, es) => es.toString()

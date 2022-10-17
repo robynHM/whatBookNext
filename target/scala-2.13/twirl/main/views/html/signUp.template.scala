@@ -28,12 +28,14 @@ Seq[Any](format.raw/*3.1*/("""
 
 """),_display_(/*5.2*/main("sign up")/*5.17*/{_display_(Seq[Any](format.raw/*5.18*/("""
 """),format.raw/*6.1*/("""<div class="headerBackground">
-    <h1 class="header">What Book Next...</h1>
-
+    <div >
+        <img class="headingBanner" src="/assets/images/bannerPic.jpg" alt="books piled with writing what book next over the top">
+    </div>
     <ul class="navigation">
         <li>Browse by</li>
-        <li><a href=""""),_display_(/*11.23*/controllers/*11.34*/.routes.ApplicationController.home()),format.raw/*11.70*/("""">Home</a></li>
+        <li><a href=""""),_display_(/*12.23*/controllers/*12.34*/.routes.ApplicationController.home()),format.raw/*12.70*/("""">Home</a></li>
         <li>Search</li>
+        <li><a href=""""),_display_(/*14.23*/controllers/*14.34*/.routes.ApplicationController.signIn()),format.raw/*14.72*/("""">Sign In/Up</a></li>
     </ul>
 </div>
 <h2 class="pageTitle">Sign Up</h2>
@@ -64,11 +66,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-14T16:08:26.755
+                  DATE: 2022-10-17T09:32:44.735
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/signUp.scala.html
-                  HASH: bedb30f0698eb547a2ff576e091885bbd8d24846
-                  MATRIX: 432->1|767->24|887->51|915->54|938->69|976->70|1003->71|1185->226|1205->237|1262->273
-                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|30->6|35->11|35->11|35->11
+                  HASH: 0d4a7f29065cf92e6cb99a22d50ad33a75eff9e7
+                  MATRIX: 432->1|767->24|887->51|915->54|938->69|976->70|1003->71|1290->331|1310->342|1367->378|1456->440|1476->451|1535->489
+                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|30->6|36->12|36->12|36->12|38->14|38->14|38->14
                   -- GENERATED --
               */
           

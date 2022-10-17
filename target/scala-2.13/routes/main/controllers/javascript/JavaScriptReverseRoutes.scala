@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/conf/routes
-// @DATE:Thu Oct 13 16:31:26 BST 2022
+// @DATE:Mon Oct 17 09:38:25 BST 2022
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -23,7 +23,7 @@ package controllers.javascript {
       "controllers.ApplicationController.findBook",
       """
         function(search0,term1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "findBook/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("search", search0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("term", term1))})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "findbook/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("search", search0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("term", term1))})
         }
       """
     )

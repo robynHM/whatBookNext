@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/conf/routes
-// @DATE:Thu Oct 13 16:31:26 BST 2022
+// @DATE:Mon Oct 17 09:38:25 BST 2022
 
 import play.api.mvc.Call
 
@@ -20,7 +20,7 @@ package controllers {
     // @LINE:5
     def findBook(search:String, term:String): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "findBook/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("search", search)) + "/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("term", term)))
+      Call("GET", _prefix + { _defaultPrefix } + "findbook/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("search", search)) + "/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("term", term)))
     }
   
     // @LINE:12

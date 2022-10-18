@@ -32,11 +32,14 @@ Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](form
       <li>Browse by</li>
       <li><a href=""""),_display_(/*9.21*/controllers/*9.32*/.routes.ApplicationController.home()),format.raw/*9.68*/("""">Home</a></li>
       <li>Search</li>
-      <li><a href=""""),_display_(/*11.21*/controllers/*11.32*/.routes.ApplicationController.signIn()),format.raw/*11.70*/("""">Sign In/Up</a></li>
+      <li><a href=""""),_display_(/*11.21*/controllers/*11.32*/.routes.ApplicationController.signIn()),format.raw/*11.70*/("""">Sign In</a></li>
     </ul>
 </div>
-<img class="homeImg" src="/assets/images/homePic.png" alt="book and coffee">
-""")))}),format.raw/*15.2*/("""
+<div class="homeImageTextContainer">
+    <img class="homeImg" src="/assets/images/homePic.jpg" alt="book and coffee">
+    <div class="writingOnHomeImage">Here we aim to find you your next book obsession. You can browse by your favourite genre or for more tailored recommendations login in or sign up.</div>
+</div>
+""")))}),format.raw/*18.2*/("""
 """))
       }
     }
@@ -53,11 +56,11 @@ Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](form
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-17T09:29:06.269
+                  DATE: 2022-10-18T14:46:58.709
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/home.scala.html
-                  HASH: 0f1da75143b9f0a1f2b8e39b7f6d3d21178615b4
-                  MATRIX: 721->1|817->5|847->27|885->28|912->29|1194->285|1213->296|1269->332|1354->390|1374->401|1433->439|1580->556
-                  LINES: 21->1|26->2|26->2|26->2|27->3|33->9|33->9|33->9|35->11|35->11|35->11|39->15
+                  HASH: 412dffea3858cd94dfbee1c1c0857ebe29d96663
+                  MATRIX: 721->1|817->5|847->27|885->28|912->29|1194->285|1213->296|1269->332|1354->390|1374->401|1433->439|1814->790
+                  LINES: 21->1|26->2|26->2|26->2|27->3|33->9|33->9|33->9|35->11|35->11|35->11|42->18
                   -- GENERATED --
               */
           

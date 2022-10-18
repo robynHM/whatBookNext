@@ -38,12 +38,18 @@ Seq[Any](format.raw/*3.1*/("""
         <li>Search</li>
     </ul>
 </div>
-<h2 class="pageTitle">Sign In/Up</h2>
-<div class="signUpFromSignIn">
-<p>If you do not have an account then</p>
-<p><a href=""""),_display_(/*20.14*/controllers/*20.25*/.routes.ApplicationController.signUp()),format.raw/*20.63*/("""">Sign Up</a></p>
+<div class="loginBackground">
+    <h2 class="pageTitle">Sign In</h2>
+    <div class="signUpFromSignIn">
+        <form class="signInForm" method="post" autocomplete="on">
+            Email: <input type="text" name="usernameEmail"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit">
+        </form>
+        <p>If you do not have an account then</p>
+        <p><a href=""""),_display_(/*26.22*/controllers/*26.33*/.routes.ApplicationController.signUp()),format.raw/*26.71*/("""">Sign Up</a></p>
+    </div>
 </div>
-
 """)))}))
       }
     }
@@ -60,11 +66,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-17T09:32:44.744
+                  DATE: 2022-10-18T14:46:58.774
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/signInUp.scala.html
-                  HASH: 8593e7f631a47f5743249d82b097dc90b2883a22
-                  MATRIX: 432->1|769->24|889->51|917->54|940->69|978->70|1006->72|1293->332|1313->343|1370->379|1578->560|1598->571|1657->609
-                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|31->7|37->13|37->13|37->13|44->20|44->20|44->20
+                  HASH: 3f54a8f7ba6d9663d941c36d5e5aa0c76c24a944
+                  MATRIX: 432->1|769->24|889->51|917->54|940->69|978->70|1006->72|1293->332|1313->343|1370->379|1871->853|1891->864|1950->902
+                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|31->7|37->13|37->13|37->13|50->26|50->26|50->26
                   -- GENERATED --
               */
           

@@ -5,6 +5,7 @@
     padding: 1%;
 }
 
+
 .headingBanner{
     width: 100%;
     height: auto;
@@ -21,6 +22,7 @@
     color: #D7D4DD;
     padding: 2%;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .navigation li a{
@@ -32,10 +34,30 @@
     font-family: Copperplate;
 }
 
+.navigation li:hover{
+    transform: scale(1.2);
+    text-decoration: underline;
+    text-decoration-color: #838BC2;
+}
+
+.navigation li a:hover{
+    transform: scale(1.2);
+    text-decoration: underline;
+    text-decoration-color: #838BC2;
+}
+
 .pageTitle{
     color: #333F63;
     font-family: Copperplate;
     margin-left: 10%;
+    margin-top: 0;
+    padding-top: 5%
+}
+
+.loginBackground{
+    background: linear-gradient(-70deg, #838BC2 30%, rgba(0, 0, 0, 0) 30%), url('/assets/images/loginPic.jpg');
+     background-size: cover;
+     height: 600px;
 }
 
 .homeImg{
@@ -55,6 +77,15 @@
     flex-direction: row;
     justify-content: center;
     height: auto;
+    padding-bottom: 30%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.signInForm{
+    background-color: #838BC2;
+    border-radius: 8px;
+    padding: 5%;
 }
 
 .signupForm{
@@ -69,13 +100,21 @@
     align-items: center;
 }
 p{
-color: #333F63;
+    color: #D7D4DD;
+    font-family: fantasy;
 }
 
 .signUpFromSignIn p a{
-    color: #838BC2;
+    color: #D7D4DD;
     text-decoration: none;
     font-family: Copperplate;
+    background-color: #333F63;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.signUpFromSignIn p a:hover{
+    transform: scale(1.5);
 }
 
 .bookSearchContainer{
@@ -85,6 +124,7 @@ color: #333F63;
 
 .bookCover{
     width: 40%;
+    border-radius: 12px;
 
 }
 .authorName{
@@ -112,7 +152,7 @@ color: #333F63;
     float: left;
     position: absolute;
     background-color: #838BC2;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 
@@ -129,3 +169,21 @@ color: #333F63;
     position: relative;
 }
 
+.bookSearchBackground{
+    background-size: cover;
+    background: #D7D4DD;
+}
+
+.homeImageTextContainer{
+    position: relative;
+}
+
+.writingOnHomeImage{
+    position: absolute;
+     top: 15px;
+     left: 16px;
+     font-size: 18px;
+     color: #D7D4DD;
+     font-family: fantasy;
+     width: 25%;
+}

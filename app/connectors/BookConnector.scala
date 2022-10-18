@@ -5,6 +5,8 @@ import models.{APIError, BookModel, GoogleBook}
 import play.api.libs.json.{JsError, JsLookupResult, JsObject, JsSuccess, JsValue, Json, OFormat}
 import play.api.libs.ws.{WSClient, WSResponse}
 
+import java.nio.ByteBuffer
+import java.util.Base64
 import javax.inject.Inject
 import scala.concurrent.{ExecutionContext, Future}
 
@@ -27,6 +29,16 @@ class BookConnector @Inject()(ws: WSClient) {
 
       }
     }
+  }
+
+  def getImage(url: String)(implicit ec: ExecutionContext): Future[String]= {
+    val request = ws.url(url)
+    request.get().map{ response =>
+      println(new String(response.bodyAsBytes.toArray))
+      Base64.getEncoder.encodeToString(response.bodyAsBytes.toArray)
+    }
+
+
   }
 
 }

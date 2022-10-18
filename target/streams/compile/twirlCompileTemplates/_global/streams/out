@@ -1,3 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m[Error] /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/book.scala.html:20[0m
-[0m[[0m[31merror[0m] [0m[0m    <p>@"book.image"</p>: Expected '}' but found '@'[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

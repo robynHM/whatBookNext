@@ -15,6 +15,12 @@ import scala.concurrent.{ExecutionContext, Future}
 @Singleton
 class ApplicationController @Inject()(val controllerComponents: ControllerComponents, val applicationService: ApplicationService, val bookService: BookService)(implicit val ec: ExecutionContext) extends BaseController {
 
+  def getimage() = Action.async{ implicit request =>
+    bookService.getImage().map{ bytes =>
+      Ok(bytes)
+    }
+  }
+
   def home(): Action[AnyContent] = Action.async { implicit request =>
     Future.successful(Ok(views.html.home()))
   }

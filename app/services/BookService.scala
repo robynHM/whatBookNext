@@ -6,6 +6,7 @@ import connectors.BookConnector
 import models.{APIError, BookModel, UserModel}
 import repositories.TraitDataRepo
 
+import java.nio.ByteBuffer
 import javax.inject.{Inject, Singleton}
 import scala.concurrent.{ExecutionContext, Future}
 
@@ -29,6 +30,10 @@ class BookService @Inject()(connector: BookConnector, dataRepository: TraitDataR
       case Right(book: BookModel) => dataRepository.addToRead(userName, book)
       case Left(error) => Future(Left(APIError.BadAPIResponse(400, "could not add book to read list")))
     }
+  }
+
+  def getImage()(implicit ec: ExecutionContext): Future[String]= {
+    connector.getImage("http://books.google.com/books/content?id=vb5IAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
   }
 
 

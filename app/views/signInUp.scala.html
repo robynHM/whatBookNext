@@ -14,10 +14,16 @@
         <li>Search</li>
     </ul>
 </div>
-<h2 class="pageTitle">Sign In/Up</h2>
-<div class="signUpFromSignIn">
-<p>If you do not have an account then</p>
-<p><a href="@controllers.routes.ApplicationController.signUp()">Sign Up</a></p>
+<div class="loginBackground">
+    <h2 class="pageTitle">Sign In</h2>
+    <div class="signUpFromSignIn">
+        <form class="signInForm" method="post" autocomplete="on">
+            Email: <input type="text" name="usernameEmail"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit">
+        </form>
+        <p>If you do not have an account then</p>
+        <p><a href="@controllers.routes.ApplicationController.signUp()">Sign Up</a></p>
+    </div>
 </div>
-
 }

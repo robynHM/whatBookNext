@@ -35,21 +35,22 @@ Seq[Any](format.raw/*3.1*/("""
         <li>Browse by</li>
         <li><a href=""""),_display_(/*12.23*/controllers/*12.34*/.routes.ApplicationController.home()),format.raw/*12.70*/("""">Home</a></li>
         <li>Search</li>
-        <li><a href=""""),_display_(/*14.23*/controllers/*14.34*/.routes.ApplicationController.signIn()),format.raw/*14.72*/("""">Sign In/Up</a></li>
+        <li><a href=""""),_display_(/*14.23*/controllers/*14.34*/.routes.ApplicationController.signIn()),format.raw/*14.72*/("""">Sign In</a></li>
     </ul>
 </div>
+<div class="bookSearchBackground">
 <h2 class="pageTitle">Sign Up</h2>
 <div class="signUpBox">
 <img class="signInImg" src="/assets/images/signupPic.jpg" alt="library ladder">
 
 <form class="signupForm" method="post" autocomplete="on">
     Email: <input type="text" name="usernameEmail"><br>
-    username: <input type="text" name="name"><br>
+    Username: <input type="text" name="name"><br>
     Password: <input type="text" name="password"><br>
     <input type="submit">
 </form>
 </div>
-
+</div>
 """)))}))
       }
     }
@@ -66,9 +67,9 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-17T09:32:44.735
+                  DATE: 2022-10-18T14:46:58.760
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/signUp.scala.html
-                  HASH: 0d4a7f29065cf92e6cb99a22d50ad33a75eff9e7
+                  HASH: 95c8dd95938fec95c22b7e1bf1c83a9429f6f209
                   MATRIX: 432->1|767->24|887->51|915->54|938->69|976->70|1003->71|1290->331|1310->342|1367->378|1456->440|1476->451|1535->489
                   LINES: 17->1|22->2|27->3|29->5|29->5|29->5|30->6|36->12|36->12|36->12|38->14|38->14|38->14
                   -- GENERATED --

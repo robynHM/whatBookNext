@@ -25,24 +25,35 @@ object userProfile extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.ap
 
 
 Seq[Any](format.raw/*3.1*/("""
-"""),format.raw/*4.1*/("""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>userProfile</title>
-</head>
-<body>
-<h1>Hi """),_display_(/*11.9*/user/*11.13*/.name),format.raw/*11.18*/("""</h1>
-<div>
+"""),_display_(/*4.2*/main("userProfile")/*4.21*/{_display_(Seq[Any](format.raw/*4.22*/("""
 
-  <ul>
-    <li><a href="""),_display_(/*15.18*/controllers/*15.29*/.routes.ApplicationController.showReadingList(user.userName)),format.raw/*15.89*/(""">Reading List</a></li>
-    <li><a href="""),_display_(/*16.18*/controllers/*16.29*/.routes.ApplicationController.showReadList(user.userName)),format.raw/*16.86*/(""">Read List</a></li>
+"""),format.raw/*6.1*/("""<div class="headerBackground">
+  <div class="homeImageTextContainer">
+    <img class="headingBanner" src="/assets/images/creative-assortment-with-different-books.jpg" alt="books piled with writing what book next over the top">
+    <h1 class="whatBookNext">What</h1> <h1 class="bookTitle">Book</h1> <p class="inner rotate">Next</p>
+    <p class="textImageAttribution">Image by <a href="https://www.freepik.com/free-photo/creative-assortment-with-different-books_12407510.htm">Freepik</a></p>
+  </div>
+  <ul class="navigation">
+    <li>Browse by</li>
+    <li><a href=""""),_display_(/*14.19*/controllers/*14.30*/.routes.ApplicationController.home()),format.raw/*14.66*/("""">Home</a></li>
+    <li>Search</li>
   </ul>
+</div>
+<div class="usersProfileBackground">
+  <h1 class="pageTitle">Hi """),_display_(/*19.29*/user/*19.33*/.name),format.raw/*19.38*/("""</h1>
+  <div>
+
+    <ul>
+      <li><a href="""),_display_(/*23.20*/controllers/*23.31*/.routes.ApplicationController.showReadingList(user.userName)),format.raw/*23.91*/(""">Reading List</a></li>
+      <li><a href="""),_display_(/*24.20*/controllers/*24.31*/.routes.ApplicationController.showReadList(user.userName)),format.raw/*24.88*/(""">Read List</a></li>
+    </ul>
+
+  </div>
 
 </div>
-</body>
-</html>"""))
+""")))}),format.raw/*30.2*/("""
+
+"""))
       }
     }
   }
@@ -58,11 +69,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-18T14:46:58.749
+                  DATE: 2022-10-19T17:30:13.199
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/userProfile.scala.html
-                  HASH: dd1c3b1d4d397f78506491ced2477417e5b0d4e8
-                  MATRIX: 432->1|769->26|880->44|907->45|1050->162|1063->166|1089->171|1153->208|1173->219|1254->279|1321->319|1341->330|1419->387
-                  LINES: 17->1|22->2|27->3|28->4|35->11|35->11|35->11|39->15|39->15|39->15|40->16|40->16|40->16
+                  HASH: 5a70ea3b175adc1981ff81e4c1e9a868a202b83d
+                  MATRIX: 432->1|769->26|880->44|907->46|934->65|972->66|1000->68|1594->635|1614->646|1671->682|1814->798|1827->802|1853->807|1923->850|1943->861|2024->921|2093->963|2113->974|2191->1031|2270->1080
+                  LINES: 17->1|22->2|27->3|28->4|28->4|28->4|30->6|38->14|38->14|38->14|43->19|43->19|43->19|47->23|47->23|47->23|48->24|48->24|48->24|54->30
                   -- GENERATED --
               */
           

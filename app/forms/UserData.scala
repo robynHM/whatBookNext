@@ -13,7 +13,7 @@ object UserData{
     mapping(
       "usernameEmail" -> email,
       "name" -> nonEmptyText,
-      "password" -> nonEmptyText.verifying(nonEmpty)
+      "password" -> nonEmptyText
     )(UserData.apply)(UserData.unapply)
   )
 

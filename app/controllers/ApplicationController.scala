@@ -4,8 +4,9 @@ import forms.UserData
 import forms.UserData.userForm
 import models.{APIError, BookModel, UserModel}
 import play.api.libs.json.{JsValue, Json}
-import play.api.mvc.{Action, AnyContent, BaseController, ControllerComponents}
+import play.api.mvc.{Action, AnyContent, BaseController, ControllerComponents, Request}
 import services.{ApplicationService, BookService}
+import views.html.helper.CSRF
 
 import javax.inject.{Inject, Singleton}
 import scala.concurrent.{ExecutionContext, Future}
@@ -13,7 +14,7 @@ import scala.concurrent.{ExecutionContext, Future}
 
 
 @Singleton
-class ApplicationController @Inject()(val controllerComponents: ControllerComponents, val applicationService: ApplicationService, val bookService: BookService)(implicit val ec: ExecutionContext) extends BaseController {
+class ApplicationController @Inject()(val controllerComponents: ControllerComponents, val applicationService: ApplicationService, val bookService: BookService)(implicit val ec: ExecutionContext) extends BaseController with play.api.i18n.I18nSupport{
 
   def getimage() = Action.async{ implicit request =>
     bookService.getImage().map{ bytes =>
@@ -38,13 +39,26 @@ class ApplicationController @Inject()(val controllerComponents: ControllerCompon
     Ok(views.html.signUp(UserData.userForm))
   }
 
-  def signUpPost() = Action.async { implicit request =>
-    val bindForm = userForm.bindFromRequest.get
-    val newUser  = models.UserModel(bindForm.usernameEmail, bindForm.password, bindForm.name,  Seq(),  Seq())
-    applicationService.createUser(newUser).map {
-      case Left(value) => BadRequest(Json.toJson("could not create user account"))
-      case Right(user) => Redirect(routes.ApplicationController.showUserAccount(user.userName))
-    }
+
+  def accessToken(implicit request: Request[_]) = {
+    val token = CSRF.getToken
+  }
+
+  def signUpPost() = Action.async  { implicit request =>
+    accessToken
+    userForm.bindFromRequest.fold(
+      formWithErrors => {
+        Future(BadRequest(formWithErrors.errors.toString))
+      },
+      formData => {
+        val newUser  = models.UserModel(formData.usernameEmail, formData.password, formData.name,  Seq(),  Seq())
+        applicationService.createUser(newUser).map {
+          case Left(value) => BadRequest(Json.toJson("could not create user account"))
+          case Right(user) => Redirect(routes.ApplicationController.showUserAccount(user.userName))
+        }
+      }
+    )
+
   }
 
   //  def signUpPost() = Action.async(parse.form(userForm)) { implicit request =>

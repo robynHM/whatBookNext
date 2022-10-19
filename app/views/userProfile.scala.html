@@ -1,21 +1,31 @@
 @import models.UserModel
 @(user: UserModel)
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>userProfile</title>
-</head>
-<body>
-<h1>Hi @user.name</h1>
-<div>
+@main("userProfile"){
 
-  <ul>
-    <li><a href=@controllers.routes.ApplicationController.showReadingList(user.userName)>Reading List</a></li>
-    <li><a href=@controllers.routes.ApplicationController.showReadList(user.userName)>Read List</a></li>
+<div class="headerBackground">
+  <div class="homeImageTextContainer">
+    <img class="headingBanner" src="/assets/images/creative-assortment-with-different-books.jpg" alt="books piled with writing what book next over the top">
+    <h1 class="whatBookNext">What</h1> <h1 class="bookTitle">Book</h1> <p class="inner rotate">Next</p>
+    <p class="textImageAttribution">Image by <a href="https://www.freepik.com/free-photo/creative-assortment-with-different-books_12407510.htm">Freepik</a></p>
+  </div>
+  <ul class="navigation">
+    <li>Browse by</li>
+    <li><a href="@controllers.routes.ApplicationController.home()">Home</a></li>
+    <li>Search</li>
   </ul>
+</div>
+<div class="usersProfileBackground">
+  <h1 class="pageTitle">Hi @user.name</h1>
+  <div>
+
+    <ul>
+      <li><a href=@controllers.routes.ApplicationController.showReadingList(user.userName)>Reading List</a></li>
+      <li><a href=@controllers.routes.ApplicationController.showReadList(user.userName)>Read List</a></li>
+    </ul>
+
+  </div>
 
 </div>
-</body>
-</html>
+}
+

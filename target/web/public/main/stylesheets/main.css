@@ -98,6 +98,12 @@
      height: 600px;
 }
 
+.usersProfileBackground{
+    background: #D7D4DD;
+    background-size: cover;
+    height: 600px;
+}
+
 .homeImg{
     width: 100%;
     height: auto;

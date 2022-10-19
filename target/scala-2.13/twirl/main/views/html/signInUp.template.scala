@@ -29,12 +29,14 @@ Seq[Any](format.raw/*3.1*/("""
 """),_display_(/*5.2*/main("sign in")/*5.17*/{_display_(Seq[Any](format.raw/*5.18*/("""
 
 """),format.raw/*7.1*/("""<div class="headerBackground">
-    <div >
-        <img class="headingBanner" src="/assets/images/bannerPic.jpg" alt="books piled with writing what book next over the top">
+    <div class="homeImageTextContainer">
+        <img class="headingBanner" src="/assets/images/creative-assortment-with-different-books.jpg" alt="books piled with writing what book next over the top">
+        <h1 class="whatBookNext">What</h1> <h1 class="bookTitle">Book</h1> <p class="inner rotate">Next</p>
+        <p class="textImageAttribution">Image by <a href="https://www.freepik.com/free-photo/creative-assortment-with-different-books_12407510.htm">Freepik</a></p>
     </div>
     <ul class="navigation">
         <li>Browse by</li>
-        <li><a href=""""),_display_(/*13.23*/controllers/*13.34*/.routes.ApplicationController.home()),format.raw/*13.70*/("""">Home</a></li>
+        <li><a href=""""),_display_(/*15.23*/controllers/*15.34*/.routes.ApplicationController.home()),format.raw/*15.70*/("""">Home</a></li>
         <li>Search</li>
     </ul>
 </div>
@@ -47,7 +49,7 @@ Seq[Any](format.raw/*3.1*/("""
             <input type="submit">
         </form>
         <p>If you do not have an account then</p>
-        <p><a href=""""),_display_(/*26.22*/controllers/*26.33*/.routes.ApplicationController.signUp()),format.raw/*26.71*/("""">Sign Up</a></p>
+        <p><a href=""""),_display_(/*28.22*/controllers/*28.33*/.routes.ApplicationController.signUp()),format.raw/*28.71*/("""">Sign Up</a></p>
     </div>
 </div>
 """)))}))
@@ -66,11 +68,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-18T14:46:58.774
+                  DATE: 2022-10-19T13:13:16.177
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/signInUp.scala.html
-                  HASH: 3f54a8f7ba6d9663d941c36d5e5aa0c76c24a944
-                  MATRIX: 432->1|769->24|889->51|917->54|940->69|978->70|1006->72|1293->332|1313->343|1370->379|1871->853|1891->864|1950->902
-                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|31->7|37->13|37->13|37->13|50->26|50->26|50->26
+                  HASH: 7235e3bcdef77d17a7660fffcb9be86d1e64fc5c
+                  MATRIX: 432->1|769->24|889->51|917->54|940->69|978->70|1006->72|1626->665|1646->676|1703->712|2204->1186|2224->1197|2283->1235
+                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|31->7|39->15|39->15|39->15|52->28|52->28|52->28
                   -- GENERATED --
               */
           

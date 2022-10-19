@@ -29,7 +29,7 @@ Seq[Any](format.raw/*2.1*/("""
     <head>
         <title>"""),_display_(/*6.17*/title),format.raw/*6.22*/("""</title>
         <link rel="stylesheet" type="text/css" media="screen" href=""""),_display_(/*7.70*/routes/*7.76*/.Assets.versioned("/stylesheets/main.css")),format.raw/*7.118*/("""">
-        <link rel="shortcut icon" type="image/x-icon" href="../assets/images/WBNicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href=""""),_display_(/*8.62*/routes/*8.68*/.Assets.versioned("/images/WBNicon.png")),format.raw/*8.108*/("""">
 <!--        <a target="_blank" href="https://icons8.com/icon/kU7-FkDru7LN/storytelling">Storytelling</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
     </head>
     <body>
@@ -57,11 +57,11 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-18T14:52:13.024
+                  DATE: 2022-10-18T15:14:51.547
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/main.scala.html
-                  HASH: 092c46b5a5037c78c3f9f4dd0e97624ead35bfef
-                  MATRIX: 733->1|857->32|884->33|970->93|995->98|1099->176|1113->182|1176->224|1502->523|1530->530|1565->538
-                  LINES: 21->1|26->2|27->3|30->6|30->6|31->7|31->7|31->7|37->13|37->13|39->15
+                  HASH: 1a1c288c90d81629c558b3d3221b1c1bf06beb9d
+                  MATRIX: 733->1|857->32|884->33|970->93|995->98|1099->176|1113->182|1176->224|1266->288|1280->294|1341->334|1576->542|1604->549|1639->557
+                  LINES: 21->1|26->2|27->3|30->6|30->6|31->7|31->7|31->7|32->8|32->8|32->8|37->13|37->13|39->15
                   -- GENERATED --
               */
           

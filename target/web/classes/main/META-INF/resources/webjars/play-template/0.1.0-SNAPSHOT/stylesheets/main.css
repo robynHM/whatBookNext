@@ -5,13 +5,51 @@
     padding: 1%;
 }
 
+.whatBookNext{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #D7D4DD;
+    font-family: Copperplate;
+    font-size: 60px;
+}
+.bookTitle{
+     position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #D7D4DD;
+        font-family: Copperplate;
+        font-size: 90px;
+}
+
+.inner {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    font-size: 45px;
+}
+
+.rotate {
+    transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+}
 
 .headingBanner{
     width: 100%;
-    height: auto;
+    height: 200px;
 }
 .headerBackground{
     background-color: #715C8C;
+}
+.textImageAttribution {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: black;
+}
+.textImageAttribution a{
+  color: black;
 }
 
 .navigation{
@@ -125,6 +163,8 @@ p{
 .bookCover{
     width: 40%;
     border-radius: 12px;
+    margin-top: 5%;
+    margin-left: 10%;
 
 }
 .authorName{

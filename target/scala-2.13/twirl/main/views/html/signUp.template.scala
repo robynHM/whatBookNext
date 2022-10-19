@@ -28,14 +28,16 @@ Seq[Any](format.raw/*3.1*/("""
 
 """),_display_(/*5.2*/main("sign up")/*5.17*/{_display_(Seq[Any](format.raw/*5.18*/("""
 """),format.raw/*6.1*/("""<div class="headerBackground">
-    <div >
-        <img class="headingBanner" src="/assets/images/bannerPic.jpg" alt="books piled with writing what book next over the top">
+    <div class="homeImageTextContainer">
+        <img class="headingBanner" src="/assets/images/creative-assortment-with-different-books.jpg" alt="books piled with writing what book next over the top">
+        <h1 class="whatBookNext">What</h1> <h1 class="bookTitle">Book</h1> <p class="inner rotate">Next</p>
+        <p class="textImageAttribution">Image by <a href="https://www.freepik.com/free-photo/creative-assortment-with-different-books_12407510.htm">Freepik</a></p>
     </div>
     <ul class="navigation">
         <li>Browse by</li>
-        <li><a href=""""),_display_(/*12.23*/controllers/*12.34*/.routes.ApplicationController.home()),format.raw/*12.70*/("""">Home</a></li>
+        <li><a href=""""),_display_(/*14.23*/controllers/*14.34*/.routes.ApplicationController.home()),format.raw/*14.70*/("""">Home</a></li>
         <li>Search</li>
-        <li><a href=""""),_display_(/*14.23*/controllers/*14.34*/.routes.ApplicationController.signIn()),format.raw/*14.72*/("""">Sign In</a></li>
+        <li><a href=""""),_display_(/*16.23*/controllers/*16.34*/.routes.ApplicationController.signIn()),format.raw/*16.72*/("""">Sign In</a></li>
     </ul>
 </div>
 <div class="bookSearchBackground">
@@ -67,11 +69,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-18T14:46:58.760
+                  DATE: 2022-10-19T13:13:16.148
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/signUp.scala.html
-                  HASH: 95c8dd95938fec95c22b7e1bf1c83a9429f6f209
-                  MATRIX: 432->1|767->24|887->51|915->54|938->69|976->70|1003->71|1290->331|1310->342|1367->378|1456->440|1476->451|1535->489
-                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|30->6|36->12|36->12|36->12|38->14|38->14|38->14
+                  HASH: f38740123dcae2bdd62dd5554f694e019015865b
+                  MATRIX: 432->1|767->24|887->51|915->54|938->69|976->70|1003->71|1623->664|1643->675|1700->711|1789->773|1809->784|1868->822
+                  LINES: 17->1|22->2|27->3|29->5|29->5|29->5|30->6|38->14|38->14|38->14|40->16|40->16|40->16
                   -- GENERATED --
               */
           

@@ -25,21 +25,23 @@ object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlF
 
 Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](format.raw/*2.25*/("""
 """),format.raw/*3.1*/("""<div class="headerBackground">
-    <div >
-        <img class="headingBanner" src="/assets/images/bannerPic.jpg" alt="books piled with writing what book next over the top">
+    <div class="homeImageTextContainer">
+        <img class="headingBanner" src="/assets/images/creative-assortment-with-different-books.jpg" alt="books piled with writing what book next over the top">
+        <h1 class="whatBookNext">What</h1> <h1 class="bookTitle">Book</h1> <p class="inner rotate">Next</p>
+        <p class="textImageAttribution">Image by <a href="https://www.freepik.com/free-photo/creative-assortment-with-different-books_12407510.htm">Freepik</a></p>
     </div>
     <ul class="navigation">
       <li>Browse by</li>
-      <li><a href=""""),_display_(/*9.21*/controllers/*9.32*/.routes.ApplicationController.home()),format.raw/*9.68*/("""">Home</a></li>
+      <li><a href=""""),_display_(/*11.21*/controllers/*11.32*/.routes.ApplicationController.home()),format.raw/*11.68*/("""">Home</a></li>
       <li>Search</li>
-      <li><a href=""""),_display_(/*11.21*/controllers/*11.32*/.routes.ApplicationController.signIn()),format.raw/*11.70*/("""">Sign In</a></li>
+      <li><a href=""""),_display_(/*13.21*/controllers/*13.32*/.routes.ApplicationController.signIn()),format.raw/*13.70*/("""">Sign In</a></li>
     </ul>
 </div>
 <div class="homeImageTextContainer">
     <img class="homeImg" src="/assets/images/homePic.jpg" alt="book and coffee">
     <div class="writingOnHomeImage">Here we aim to find you your next book obsession. You can browse by your favourite genre or for more tailored recommendations login in or sign up.</div>
 </div>
-""")))}),format.raw/*18.2*/("""
+""")))}),format.raw/*20.2*/("""
 """))
       }
     }
@@ -56,11 +58,11 @@ Seq[Any](_display_(/*2.2*/main("What Book Next")/*2.24*/{_display_(Seq[Any](form
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-18T14:46:58.709
+                  DATE: 2022-10-19T13:05:54.393
                   SOURCE: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/app/views/home.scala.html
-                  HASH: 412dffea3858cd94dfbee1c1c0857ebe29d96663
-                  MATRIX: 721->1|817->5|847->27|885->28|912->29|1194->285|1213->296|1269->332|1354->390|1374->401|1433->439|1814->790
-                  LINES: 21->1|26->2|26->2|26->2|27->3|33->9|33->9|33->9|35->11|35->11|35->11|42->18
+                  HASH: ca682b253b7dfc1fabe260491af73aa63e614c26
+                  MATRIX: 721->1|817->5|847->27|885->28|912->29|1528->618|1548->629|1605->665|1690->723|1710->734|1769->772|2150->1123
+                  LINES: 21->1|26->2|26->2|26->2|27->3|35->11|35->11|35->11|37->13|37->13|37->13|44->20
                   -- GENERATED --
               */
           

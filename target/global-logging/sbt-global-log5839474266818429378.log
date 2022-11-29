@@ -1,0 +1,25 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(0e0b799a-a6b1-41a6-a8ed-3c9cd12f12e2), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 24 Scala sources and 1 Java source to /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/repositories/DataRepository.scala:41:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/repositories/DataRepository.scala:48:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/repositories/DataRepository.scala:71:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/forms/UserData.scala:25:16: Reference to uninitialized value passwordCheckConstraint[0m
+[0m[[0m[33mwarn[0m] [0m[0m    .verifying(passwordCheckConstraint)[0m
+[0m[[0m[33mwarn[0m] [0m[0m               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 1 s, completed 29 Nov 2022, 10:48:40[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

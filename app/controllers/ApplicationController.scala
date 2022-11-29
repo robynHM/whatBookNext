@@ -37,7 +37,7 @@ class ApplicationController @Inject()(val controllerComponents: ControllerCompon
         Future(BadRequest(formWithErrors.errors.toString))
       },
       formData => {
-        applicationService.returnUser(formData.usernameEmail, Some(formData.password)).map {
+        applicationService.returnUserWithPasswordCheck(formData.usernameEmail, Some(formData.password)).map {
           case Left(error) => BadRequest(Json.toJson("password or username did not match"))
           case Right(user) => Redirect(routes.ApplicationController.showUserAccount(user.userName))
         }
@@ -64,7 +64,6 @@ class ApplicationController @Inject()(val controllerComponents: ControllerCompon
         }
       }
     )
-
   }
 
   def showReadingList(userName: String): Action[AnyContent] = Action.async { implicit request =>

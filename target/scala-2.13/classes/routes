@@ -1,0 +1,20 @@
+# An example controller showing a sample home page
+GET     /home                           controllers.ApplicationController.home()
+GET     /userprofile/:username/readinglist       controllers.ApplicationController.showReadingList(username: String)
+GET     /userprofile/:username               controllers.ApplicationController.showUserAccount(username: String)
+GET     /findbook/:search/:term               controllers.ApplicationController.findBook(search: String, term: String)
+GET     /userprofile/:username/readinglist               controllers.ApplicationController.showReadingList(username: String)
+GET     /userprofile/:username/readlist               controllers.ApplicationController.showReadList(username: String)
+PUT     /userprofile/updatename/:username             controllers.ApplicationController.updateUserName(username: String)
+DELETE  /userprofile/:username             controllers.ApplicationController.delete(username: String)
+GET     /signin                            controllers.ApplicationController.signIn()
+POST    /signin                            controllers.ApplicationController.signInPost()
+GET    /signup                            controllers.ApplicationController.signUp()
+POST    /signup                           controllers.ApplicationController.signUpPost()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+GET     /library/getGoogle/:search/:term      controllers.ApplicationController.getGoogleBook(search: String, term: String)

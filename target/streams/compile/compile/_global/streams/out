@@ -1,0 +1,19 @@
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/repositories/DataRepository.scala:41:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/repositories/DataRepository.scala:48:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/repositories/DataRepository.scala:71:43: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    collection.find(byUserName(userName)).headOption flatMap {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/app/forms/UserData.scala:25:16: Reference to uninitialized value passwordCheckConstraint[0m
+[0m[[0m[33mwarn[0m] [0m[0m    .verifying(passwordCheckConstraint)[0m
+[0m[[0m[33mwarn[0m] [0m[0m               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m

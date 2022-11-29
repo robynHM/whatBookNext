@@ -35,13 +35,19 @@ class ApplicationService @Inject()(dataRepository: TraitDataRepo)(implicit ec: E
 
   }
 
-  def returnUser(userName: String, password: Option[String] = None): Future[Either[APIError, UserModel]] = {
+  def returnUserWithPasswordCheck(userName: String, password: Option[String] = None): Future[Either[APIError, UserModel]] = {
     dataRepository.returnUser(userName).map {
       case Right(user: UserModel) if user.password.equals(password.get) => Right(user)
       case Right(user: UserModel) => Left(APIError.BadAPIResponse(404, "password is incorrect"))
       case Left(errors) => Left(APIError.BadAPIResponse(404, "user does not exist"))
     }
   }
+
+  def returnUser(userName: String): Future[Either[APIError, UserModel]] =
+    dataRepository.returnUser(userName).map{
+      case Right(user: UserModel) => Right(user)
+      case Left(errors) => Left(APIError.BadAPIResponse(404, "could not find book"))
+    }
 
 
   //  def addToReading(userName: String, book: String): Future[Either[APIError, Seq[BookModel]]] = {

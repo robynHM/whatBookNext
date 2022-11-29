@@ -1,0 +1,235 @@
+.header{
+    color: #D7D4DD;
+    text-align: center;
+    font-family: Copperplate;
+    padding: 1%;
+}
+
+.whatBookNext{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #D7D4DD;
+    font-family: Copperplate;
+    font-size: 60px;
+}
+.bookTitle{
+     position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #D7D4DD;
+        font-family: Copperplate;
+        font-size: 90px;
+}
+
+.inner {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    font-size: 45px;
+}
+
+.rotate {
+    transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.headingBanner{
+    width: 100%;
+    height: 200px;
+}
+.headerBackground{
+    background-color: #715C8C;
+}
+.textImageAttribution {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: black;
+}
+.textImageAttribution a{
+  color: black;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    color: #D7D4DD;
+    padding: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navigation li a{
+    color: inherit;
+    text-decoration: none;
+    font-family: Copperplate;
+}
+.navigation li{
+    font-family: Copperplate;
+}
+
+.navigation li:hover{
+    transform: scale(1.2);
+    text-decoration: underline;
+    text-decoration-color: #838BC2;
+}
+
+.navigation li a:hover{
+    transform: scale(1.2);
+    text-decoration: underline;
+    text-decoration-color: #838BC2;
+}
+
+.pageTitle{
+    color: #333F63;
+    font-family: Copperplate;
+    margin-left: 10%;
+    margin-top: 0;
+    padding-top: 5%
+}
+
+.loginBackground{
+    background: linear-gradient(-70deg, #838BC2 30%, rgba(0, 0, 0, 0) 30%), url('/assets/images/loginPic.jpg');
+     background-size: cover;
+     height: 600px;
+}
+
+.usersProfileBackground{
+    background: #D7D4DD;
+    background-size: cover;
+    height: 600px;
+}
+
+.homeImg{
+    width: 100%;
+    height: auto;
+}
+
+.signInImg{
+    width: 30%;
+    height: auto;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.signUpBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 30%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.signInForm{
+    background-color: #838BC2;
+    border-radius: 8px;
+    padding: 5%;
+}
+
+.signupForm{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+}
+
+.signUpFromSignIn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+    color: #D7D4DD;
+    font-family: fantasy;
+}
+
+.signUpFromSignIn p a{
+    color: #D7D4DD;
+    text-decoration: none;
+    font-family: Copperplate;
+    background-color: #333F63;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.signUpFromSignIn p a:hover{
+    transform: scale(1.5);
+}
+
+.bookSearchContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.bookCover{
+    width: 40%;
+    border-radius: 12px;
+    margin-top: 5%;
+    margin-left: 10%;
+
+}
+.authorName{
+   color: #333F63;
+    font-family: Copperplate;
+}
+
+.bookSearchDetails li{
+    list-style: none;
+    font-family: fantasy;
+}
+
+.bookSearchText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hideText{
+    display: none;
+}
+
+.icon:hover + .hideText{
+    display: block;
+    float: left;
+    position: absolute;
+    background-color: #838BC2;
+    opacity: 0.8;
+}
+
+
+.icon{
+    width: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.iconContainers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.bookSearchBackground{
+    background-size: cover;
+    background: #D7D4DD;
+}
+
+.homeImageTextContainer{
+    position: relative;
+}
+
+.writingOnHomeImage{
+    position: absolute;
+     top: 15px;
+     left: 16px;
+     font-size: 18px;
+     color: #D7D4DD;
+     font-family: fantasy;
+     width: 25%;
+}

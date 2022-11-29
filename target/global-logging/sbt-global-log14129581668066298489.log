@@ -1,0 +1,86 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (Homebrew Java 11.0.16.1)
+[debug]       Load.loadUnit: plugins took 46.771125ms
+[debug]       Load.loadUnit: defsScala took 0.160458ms
+[debug] [Loading] Scanning directory /Users/robyn.garlington/.sbt/1.0/plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/robyn.garlington/.sbt/1.0/plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 7.288208 ms
+[debug]           Load.resolveProject(global-plugins) took 26.309208ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /Users/robyn.garlington/.sbt/1.0/plugins, plugins: List(<none>))) took 49.472166ms
+[debug] [Loading] Done in /Users/robyn.garlington/.sbt/1.0/plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 59.087292ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.09775ms
+[debug]     Load.loadUnit(file:/Users/robyn.garlington/.sbt/1.0/plugins/, ...) took 110.50575ms
+[debug]   Load.apply: load took 281.768416ms
+[debug]   Load.apply: resolveProjects took 3.07825ms
+[debug]   Load.apply: finalTransforms took 28.875917ms
+[debug]   Load.apply: config.delegates took 3.291ms
+[debug]   Load.apply: Def.make(settings)... took 315.39675ms
+[debug]   Load.apply: structureIndex took 63.456958ms
+[debug]   Load.apply: mkStreams took 0.810042ms
+[info] loading global plugins from /Users/robyn.garlington/.sbt/1.0/plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 1512.355ms
+[debug]           Load.loadUnit: plugins took 10.499917ms
+[debug]           Load.loadUnit: defsScala took 0.00175ms
+[debug] [Loading] Scanning directory /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/project
+[debug]             Load.loadUnit: mkEval took 3.805208ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 0.812792 ms
+[info] loading settings for project whatbooknext-build from plugins.sbt ...
+[debug]               Load.resolveProject(whatbooknext-build) took 1.159291ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id whatbooknext-build, base: /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/project, plugins: List(<none>))) took 2.223084ms
+[debug] [Loading] Done in /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/project, returning: (whatbooknext-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 69.444792ms
+[debug]           Load.loadUnit: cleanEvalClasses took 2.468417ms
+[debug]         Load.loadUnit(file:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/project/, ...) took 82.887083ms
+[debug]       Load.apply: load took 83.46025ms
+[debug]       Load.apply: resolveProjects took 0.050958ms
+[debug]       Load.apply: finalTransforms took 4.768291ms
+[debug]       Load.apply: config.delegates took 0.206375ms
+[debug]       Load.apply: Def.make(settings)... took 46.492208ms
+[debug]       Load.apply: structureIndex took 11.721833ms
+[debug]       Load.apply: mkStreams took 0.001333ms
+[info] loading project definition from /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 510.748667ms
+[debug]     Load.loadUnit: defsScala took 0.001458ms
+[debug] [Loading] Scanning directory /Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext
+[debug]       Load.loadUnit: mkEval took 0.143208ms

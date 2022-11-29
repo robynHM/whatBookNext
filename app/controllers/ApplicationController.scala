@@ -1,7 +1,8 @@
 package controllers
 
-import forms.UserData
+import forms.{UserData, UserLogin}
 import forms.UserData.userForm
+import forms.UserLogin.userLoggingInForm
 import models.{APIError, BookModel, UserModel}
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, AnyContent, BaseController, ControllerComponents, Request}
@@ -16,37 +17,42 @@ import scala.concurrent.{ExecutionContext, Future}
 @Singleton
 class ApplicationController @Inject()(val controllerComponents: ControllerComponents, val applicationService: ApplicationService, val bookService: BookService)(implicit val ec: ExecutionContext) extends BaseController with play.api.i18n.I18nSupport{
 
-  def getimage() = Action.async{ implicit request =>
-    bookService.getImage().map{ bytes =>
-      Ok(bytes)
-    }
-  }
 
-  def home(): Action[AnyContent] = Action.async { implicit request =>
+  def home(): Action[AnyContent] = Action.async {implicit request =>
     Future.successful(Ok(views.html.home()))
   }
 
-  def signIn(): Action[AnyContent] =  Action { implicit request =>
-    Ok(views.html.signInUp(UserData.userForm))
+  def accessToken(implicit request: Request[_]) = {
+    CSRF.getToken
   }
 
-  def signInPost(): Action[AnyContent] =  ???
-//  Action { implicit request =>
-//    Ok(views.html.signInUp(UserData.userForm))
-//  }
+  def signIn(): Action[AnyContent] =  Action {implicit request =>
+    Ok(views.html.signInUp(UserLogin.userLoggingInForm))
+  }
 
-  def signUp() = Action { implicit request =>
+  def signInPost(): Action[AnyContent] =  Action.async {implicit request =>
+    accessToken
+    userLoggingInForm.bindFromRequest().fold(
+      formWithErrors => {
+        Future(BadRequest(formWithErrors.errors.toString))
+      },
+      formData => {
+        applicationService.returnUser(formData.usernameEmail, Some(formData.password)).map {
+          case Left(error) => BadRequest(Json.toJson("password or username did not match"))
+          case Right(user) => Redirect(routes.ApplicationController.showUserAccount(user.userName))
+        }
+      }
+    )
+  }
+
+  def signUp(): Action[AnyContent] = Action { implicit request =>
     Ok(views.html.signUp(UserData.userForm))
   }
 
 
-  def accessToken(implicit request: Request[_]) = {
-    val token = CSRF.getToken
-  }
-
-  def signUpPost() = Action.async  { implicit request =>
+  def signUpPost(): Action[AnyContent] = Action.async  { implicit request =>
     accessToken
-    userForm.bindFromRequest.fold(
+    userForm.bindFromRequest().fold(
       formWithErrors => {
         Future(BadRequest(formWithErrors.errors.toString))
       },
@@ -60,15 +66,6 @@ class ApplicationController @Inject()(val controllerComponents: ControllerCompon
     )
 
   }
-
-  //  def signUpPost() = Action.async(parse.form(userForm)) { implicit request =>
-//    val userData = request.body
-//    val newUser  = models.UserModel(userData.usernameEmail, userData.password, userData.name,  Seq(),  Seq())
-//    applicationService.createUser(newUser).map {
-//      case Left(value) => Ok(Json.toJson("could not create user account"))
-//      case Right(value) => Redirect(routes.ApplicationController.showUserAccount(newUser.userName))
-//    }
-//  }
 
   def showReadingList(userName: String): Action[AnyContent] = Action.async { implicit request =>
     applicationService.showReadingList(userName).map{
@@ -105,7 +102,7 @@ class ApplicationController @Inject()(val controllerComponents: ControllerCompon
         case Right(book: UserModel) => Created(views.html.readingList(book.readingList))
         case Left(error: APIError) => Status(error.httpResponseStatus)(Json.toJson(error.reason))
       }
-      case None => Future(Ok(views.html.signInUp(UserData.userForm)))
+      case None => Future(Ok(views.html.signInUp(UserLogin.userLoggingInForm)))
     }
 
   }

@@ -31,15 +31,7 @@ class BookConnector @Inject()(ws: WSClient) {
     }
   }
 
-  def getImage(url: String)(implicit ec: ExecutionContext): Future[String]= {
-    val request = ws.url(url)
-    request.get().map{ response =>
-      println(new String(response.bodyAsBytes.toArray))
-      Base64.getEncoder.encodeToString(response.bodyAsBytes.toArray)
-    }
 
-
-  }
 
 }
 

@@ -5,7 +5,7 @@ ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "play-template"
+    name := "whatBookNext"
   )
   .enablePlugins(PlayScala)
 
@@ -20,3 +20,4 @@ libraryDependencies ++= Seq(
 )
 libraryDependencies += ws
 libraryDependencies += ("org.typelevel"                %% "cats-core"                 % "2.3.0")
+

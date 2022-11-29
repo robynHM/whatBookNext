@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/conf/routes
-// @DATE:Tue Oct 18 14:46:58 BST 2022
+// @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/conf/routes
+// @DATE:Tue Nov 29 09:52:04 GMT 2022
 
 package router
 
@@ -51,7 +51,6 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signin""", """controllers.ApplicationController.signInPost()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.ApplicationController.signUp()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.ApplicationController.signUpPost()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """getimage""", """controllers.ApplicationController.getimage()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """library/getGoogle/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""", """controllers.ApplicationController.getGoogleBook(search:String, term:String)"""),
     Nil
@@ -277,29 +276,11 @@ class Routes(
     )
   )
 
-  // @LINE:14
-  private[this] lazy val controllers_ApplicationController_getimage12_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("getimage")))
-  )
-  private[this] lazy val controllers_ApplicationController_getimage12_invoker = createInvoker(
-    ApplicationController_0.getimage(),
-    play.api.routing.HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.ApplicationController",
-      "getimage",
-      Nil,
-      "GET",
-      this.prefix + """getimage""",
-      """""",
-      Seq()
-    )
-  )
-
   // @LINE:17
-  private[this] lazy val controllers_Assets_versioned13_route = Route("GET",
+  private[this] lazy val controllers_Assets_versioned12_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned13_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned12_invoker = createInvoker(
     Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -314,10 +295,10 @@ class Routes(
   )
 
   // @LINE:20
-  private[this] lazy val controllers_ApplicationController_getGoogleBook14_route = Route("GET",
+  private[this] lazy val controllers_ApplicationController_getGoogleBook13_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("library/getGoogle/"), DynamicPart("search", """[^/]+""",true), StaticPart("/"), DynamicPart("term", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_ApplicationController_getGoogleBook14_invoker = createInvoker(
+  private[this] lazy val controllers_ApplicationController_getGoogleBook13_invoker = createInvoker(
     ApplicationController_0.getGoogleBook(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -406,22 +387,16 @@ class Routes(
         controllers_ApplicationController_signUpPost11_invoker.call(ApplicationController_0.signUpPost())
       }
   
-    // @LINE:14
-    case controllers_ApplicationController_getimage12_route(params@_) =>
-      call { 
-        controllers_ApplicationController_getimage12_invoker.call(ApplicationController_0.getimage())
-      }
-  
     // @LINE:17
-    case controllers_Assets_versioned13_route(params@_) =>
+    case controllers_Assets_versioned12_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned13_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned12_invoker.call(Assets_1.versioned(path, file))
       }
   
     // @LINE:20
-    case controllers_ApplicationController_getGoogleBook14_route(params@_) =>
+    case controllers_ApplicationController_getGoogleBook13_route(params@_) =>
       call(params.fromPath[String]("search", None), params.fromPath[String]("term", None)) { (search, term) =>
-        controllers_ApplicationController_getGoogleBook14_invoker.call(ApplicationController_0.getGoogleBook(search, term))
+        controllers_ApplicationController_getGoogleBook13_invoker.call(ApplicationController_0.getGoogleBook(search, term))
       }
   }
 }

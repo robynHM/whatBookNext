@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/bookRecs/conf/routes
-// @DATE:Tue Oct 18 14:46:58 BST 2022
+// @SOURCE:/Users/robyn.garlington/Documents/scalaTraining/bookRecsProject/whatBookNext/conf/routes
+// @DATE:Tue Nov 29 09:52:04 GMT 2022
 
 
 package router {

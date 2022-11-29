@@ -32,9 +32,7 @@ class BookService @Inject()(connector: BookConnector, dataRepository: TraitDataR
     }
   }
 
-  def getImage()(implicit ec: ExecutionContext): Future[String]= {
-    connector.getImage("http://books.google.com/books/content?id=vb5IAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
-  }
+
 
 
 }

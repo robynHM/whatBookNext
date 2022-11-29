@@ -8,7 +8,7 @@ import play.api.data.validation.Constraints._
 
 case class UserData(usernameEmail: String, name: String, password: String)
 
-object UserData{
+object UserData {
   val userForm = Form(
     mapping(
       "usernameEmail" -> email,
@@ -16,8 +16,6 @@ object UserData{
       "password" -> nonEmptyText
     )(UserData.apply)(UserData.unapply)
   )
-
-
 
 
   val allNumbers = """\d*""".r
@@ -41,3 +39,4 @@ object UserData{
   )
 
 }
+
